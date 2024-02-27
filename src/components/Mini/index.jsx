@@ -1,115 +1,147 @@
-import React, {useEffect} from 'react';
-import {NavLink ,Routes,Route} from "react-router-dom";
-import Home from "./index";
+import React from 'react';
+import {NavLink, Route, Routes} from "react-router-dom";
+import Home from "../Home";
 import Dizelnoe from "../Dizelnoe";
-import Mini from "../Mini";
 import Pechnoe from "../Pechnoe";
 import Sudovoe from "../Sudovoe";
 import Blog from "../Blog";
 import Lichniy from "../Lichniy";
+import Mini from "./index";
 import sendTelegram from "../Bot/bot";
 
-
-
 function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jitnitsa,atp,otziv,
-                   neftekor1,
-                   neftekor2,
-                   neftekor3,
-                   neftekor4,
-                   neftekor5,
-                   neftekor6,
-                   diplom1,
-                   diplom2,
-                   diplom3,
-                   diplom4,
-                   diplom5,
-    logo1,logo2,logo3,logo4,logo5,
+               neftekor1,
+               neftekor2,
+               neftekor3,
+               neftekor4,
+               neftekor5,
+               neftekor6,
+    diplom1,
+    diplom2,
+    diplom3,
+    diplom4,
+    diplom5,
                    user1,user2,user3,footer2,logo,logout,
-                   yandex,vk,whatsapp,telegram}) {
+                   yandex,vk,whatsapp,telegram
+               }) {
     return (
-        <div className={"container2"}>
-            <div className="box">
-                <h1><span style={{color: "#DBA833"}}>Поставка нефтепродуктов </span>
-                    в <br/> Москве и Московской области</h1>
-                <p>От 1000 литров и от 46 рублей за литр</p>
-                <button className={"btn"}>Заказать звонок</button>
+        <div className={"container4"}>
+            <div className="head1">
+                <h1><span style={{color: "#DBA833"}}>Мини-АЗС</span> НЕФТЕКОР</h1>
+                <p>Получите собственную АЗС на вашем предприятии</p>
+                <div className="btn">Заказать звонок</div>
             </div>
-            <h2 className={"h2"}>Нефтепродукты</h2>
-            <div className="page1">
-                <div className="half">
-                    <div className="card1">
-                        <h3>Судовое топливо</h3>
-                        <p>Мы предоставляем судовое дизельное топливо как для физических лиц, так и компаниям</p>
-                        <button className={"btn"}>Подробнее</button>
-
-                    </div>
-
-                </div>
-                <div className="card2">
-                    <h3>Дизельное топливо</h3>
-                    <p>Мы являемся надежным поставщиком дизельного топлива в Москве и Московской области.</p>
-                    <button className={"btn"}>Подробнее</button>
-
-                </div>
-
-            </div>
-            <div className="full">
-                <div className="card3">
-                    <h3>Печное топливо</h3>
-                    <p>Печное топливо может служить для отопления коммерческой
-                        недвижимости и частных домов,
-                        строительных площадок, в качестве топлива для небольших котельных
-                        и сельхоз организаций.</p>
-                    <button className={"btn"}>Подробнее</button>
-                </div>
-            </div>
-
-            <div className="page2">
+            <div className="pages2">
                 <div className="head">
-                    <h1>Умная <span style={{color: "#DBA833"}}>АЗС НЕФТЕКОР</span></h1>
-                    <p>Мы предоставляем АЗС с комплектом разрешительной документации. <br/>
-                        У нас есть решение для любого объема потребления
-                    </p>
+                    <h1>У нас <span style={{color: "#DBA833"}}>есть решение для <br/> любого
+                        объема </span>потребления</h1>
+
 
                 </div>
                 <div className="card">
                     <img style={{width: "100%"}} src={mini1} alt=""/>
                     <h3>Мини АЗС на <span style={{color: "#DBA833"}}>4500 литров</span></h3>
-                    Оптимально для потребления от <br/> 10 до 15 тысяч литров в месяц
+                    <p>
+                        Оптимально для потребления от <br/> 10 до 15 тысяч литров в месяц
+                    </p>
+                    <p>Цена от 888 888 тысяч рублей</p>
+                    <p>Производство за 20 дней</p>
+                    <p>Бесплатная доставка</p>
+                    <p>Монтаж за 1 день</p>
+                    <button className={"btn"}>Заказать звонок</button>
+
                 </div>
                 <div className="card">
                     <img style={{width: "100%"}} src={mini2} alt=""/>
                     <h3>Мини АЗС на <span style={{color: "#DBA833"}}> 10 000 литров</span></h3>
-                    Оптимально для потребления от <br/> 15 до 35 тысяч литров в месяц
+                    <p>Оптимально для потребления от <br/> 15 до 35 тысяч литров в месяц</p>
+                    <p>Цена от 888 888 тысяч рублей</p>
+                    <p>Производство за 25 дней</p>
+                    <p> Бесплатная доставка</p>
+                    <p>Монтаж за 1 день</p>
+                    <button className={"btn"}>Заказать звонок</button>
+
                 </div>
                 <div className="card">
                     <img style={{width: "100%"}} src={mini3} alt=""/>
                     <h3>Мини АЗС на <span style={{color: "#DBA833"}}>20 000 литров</span></h3>
-                    Оптимально для потребления от <br/> 35 тысяч литров в месяц
+                    <p>
+                        Оптимально для потребления от <br/> 35 тысяч литров в месяц
+                    </p>
+                    <p>Цена от 888 888 тысяч рублей</p>
+                    <p>Производство за 30 дней</p>
+                    <p>Бесплатная доставка</p>
+                    <p>Монтаж за 1 день</p>
+                    <button className={"btn"}>Заказать звонок</button>
+
                 </div>
-                <button className={"btn"}>Заказать Мини АЗС</button>
             </div>
-            <div className="page3">
-                <h1><span style={{color: "#DBA833"}}>Производители</span> качественного топлива</h1>
-                <p>С которыми у нас прямые договора. Вы получите топливо без посредников</p>
+            <div className="pages3">
+                <div className="head">
+                    <h1><span style={{color: "#DBA833"}}>Почему выгодно</span> заказывать мини-АЗС у нас?</h1>
+                    <p>Доставим, подключим и проведем обучение персонала</p>
+                </div>
+                <div className="cards">
+                    <div className="card">
+                        <img src={vector} alt=""/>
+                        <p>Мы производим
+                            Мини АЗС более
+                            8 лет и наработали
+                            большой опыт</p>
+
+                    </div>
+                    <div className="card">
+                        <img src={gas} alt=""/>
+                        <p>За это время мы
+                            ввели в
+                            эксплуатацию
+                            более 100 Мини-АЗС</p>
+
+                    </div>
+                    <div className="card">
+                        <img src={syn} alt=""/>
+                        <p>У нас возможно приобретение Мини
+                            АЗС Б/У</p>
+
+                    </div>
+                </div>
+            </div>
+            <div className="pages4">
+                <h1>Примеры наших <span style={{color: "#DBA833"}}>АЗС на предприятиях</span></h1>
                 <div className="images">
-                    <img src={logo1} alt=""/>
-                    <img src={logo2} alt=""/>
-                    <img src={logo3} alt=""/>
-                    <img src={logo4} alt=""/>
-                    <img src={logo5} alt=""/>
+                    <img src={neftekor1} alt=""/>
+                    <img src={neftekor2} alt=""/>
+                    <img src={neftekor3} alt=""/>
+                    <img src={neftekor4} alt=""/>
+                    <img src={neftekor5} alt=""/>
+                    <img src={neftekor6} alt=""/>
                 </div>
             </div>
-            <div className="page4">
-                <h1>География <span style={{color: "#DBA833"}}>поставок</span></h1>
+            <div className="pages5">
+                <div className="head">
+                    <h1>Мини-АЗС Нефтекор <br/>
+                        <span style={{color: "#DBA833"}}>сертефицированы</span>
+                    </h1>
+                    <p>Мы поставляем продукцию с полным комплектом разрешительной документации</p>
+                </div>
+                <div className="box-block">
+                    <img src={diplom1} alt=""/>
+                    <img src={diplom2} alt=""/>
+                    <img src={diplom3} alt=""/>
+                    <img src={diplom4} alt=""/>
+                    <img src={diplom5} alt=""/>
+
+                </div>
+            </div>
+            <div className="pages6">
+                <h1><span style={{color: "#DBA833"}}>География </span>поставок Мини-АЗС</h1>
                 <img
                     src="https://neftekor.com/wp-content/uploads/2022/07/geography.png"
                     className={"iframe"} loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"></img>
             </div>
-            <div className="page5">
-                <h1>Клиенты</h1>
-                <p>Мы поставляем дизельное топливо более 15 лет</p>
+            <div className="pages7">
+                <h1><span style={{color: "black"}}>Наши</span> клиенты</h1>
                 <div className="images2">
                     <img src={lom} alt=""/>
                     <img src={atlant} alt=""/>
@@ -119,8 +151,8 @@ function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jit
                     <img src={atp} alt=""/>
                 </div>
             </div>
-            <div className="page6">
-                <h1>Отзывы</h1>
+            <div className="pages8">
+                <h1><span style={{color:"#DBA833"}}>Отзывы</span> о нашей работе</h1>
                 <div className="card">
                     <img src={otziv} alt=""/>
                     <div className="text">
@@ -164,7 +196,7 @@ function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jit
 
                 </div>
             </div>
-            <div className="page7">
+            <div className="pages9">
                 <h1><span style={{color: "#DBA833"}}>Новости</span> топливного рынка</h1>
                 <div className="card">
                     <img src={mini1} alt=""/>
@@ -207,13 +239,11 @@ function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jit
             </div>
             <div className="footer">
                 <div className="part1">
-                    <h1>Свяжитесь <span style={{color: "#DBA833"}}>с нами!</span></h1>
                     <form action="" method={"get"}>
                         <input id={"name"} type="text" className={"input"} placeholder={"Имя"} />
-                        <input id={"phone"} type="phone" className={"input"} placeholder={"Телефон"}/>
+                        <input id={"phone"} type="phone" className={"input"} placeholder={"Телефон"} />
                         <button onClick={sendTelegram} type="submit" className={"input2"}>Отправить</button>
                     </form>
-
                 </div>
                 <div className="part2">
                     <h1>Наша <span style={{color: "#DBA833"}}>команда</span></h1>
@@ -305,12 +335,8 @@ function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jit
                     </div>
                 </div>
             </div>
-            <script rel="javascript" type="text/javascript"
-                    src={"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"}></script>
-
 
         </div>
-
     );
 }
 
