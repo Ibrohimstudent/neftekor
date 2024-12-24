@@ -10,7 +10,7 @@ function sendTelegram(){
 
 
         let settings = {
-            async: true,
+            async: false,
             crossDomain: true,
             url: "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
             method: "POST",
