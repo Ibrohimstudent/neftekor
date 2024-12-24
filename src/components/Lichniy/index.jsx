@@ -1,17 +1,18 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom"
 import {toast} from "react-toastify";
+import Kabinet from "../Kabinet/index";
 
 function Login({enter}) {
     const [login,setLogin] = useState("");
     const [password,setPassword] =useState("");
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(Kabinet);
 
     const checkLogin =(e)=>{
         e.preventDefault()
         if (login === "ibrohim" && password === "2006"){
-            navigate("/главная")
+            navigate("/kabinet")
 
         }else {
             toast("Login yoki parol xato ", {

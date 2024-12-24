@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, {useState} from 'react';
 import {Route,Routes,NavLink} from "react-router-dom";
 import logo from "./assets/logo.png"
 import "./main.scss"
@@ -59,32 +59,131 @@ import top from "./assets/top.png"
 import news from "./assets/new.png"
 import sale from "./assets/sale.png"
 import enter from "./assets/box-arrow-in-right.svg"
+import menu from "./assets/list.svg"
+import x from "./assets/x.svg"
 
 
 
 
 function App(props) {
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+
+    }
 
     return (
         <div className={"container"}>
             <div className="nav">
+
                 <div className='left-nav'>
                     <NavLink to={"/"}><img src={logo} alt=""/></NavLink>
 
                 </div>
 
                 <div className='right-nav'>
-                    <div className='top-nav'>
-                        <NavLink style={{color: "white"}} to={"/главная"}>Главная</NavLink>
-                        <NavLink style={{color: "white"}} to={"/дизельноетопливо"}>Дизельное топливо</NavLink>
-                        <NavLink style={{color: "white"}} to={"/миниАЗС"}>Мини-АЗС</NavLink>
-                        <NavLink style={{color: "white"}} to={"/печноетопливо"}>Печное топливо</NavLink>
-                        <NavLink style={{color: "white"}} to={"/судовоетопливо"}>Судовое топливо</NavLink>
-                        <NavLink style={{color: "white"}} to={"/блог"}>Блог</NavLink>
-                        <NavLink style={{color: "white"}} to={"/контакты"}>Контакты</NavLink>
-                        <NavLink style={{color: "white"}} to={"/личныйкабинет"}>Личный кабинет</NavLink>
+                    <ul className='sidebar'>
+                            <img className={"cancel"} onClick={hideSidebar} src={x} alt=""/>
+                        <li>
+                            <a><NavLink style={{color: "black"}} to={"/главная"}>Главная</NavLink></a>
 
-                    </div>
+                        </li>
+                        <li>
+                            <a><NavLink style={{color: "black"}} to={"/дизельноетопливо"}>Дизельное топливо</NavLink></a>
+
+                        </li>
+                        <li>
+                            <a>
+                                <NavLink style={{color: "black"}} to={"/миниАЗС"}>Мини-АЗС</NavLink>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                <NavLink style={{color: "black"}} to={"/печноетопливо"}>Печное топливо</NavLink>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                <NavLink style={{color: "black"}} to={"/судовоетопливо"}>Судовое топливо</NavLink>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a>
+                                <NavLink style={{color: "black"}} to={"/блог"}>Блог</NavLink>
+
+                            </a>
+
+
+                        </li>
+                      <li>
+                          <a >
+                              <NavLink style={{color: "black"}} to={"/контакты"}>Контакты</NavLink>
+
+                          </a>
+
+                      </li>
+                        <li>
+                            <a >
+                                <NavLink style={{color: "#DBA833"}} to={"/личныйкабинет"}>Личный кабинет</NavLink>
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+                    <ul className={"desktop"}>
+                        <li className={"hideOnMobile"}>
+                            <NavLink style={{color: "white"}} to={"/главная"}>Главная</NavLink>
+
+                        </li>
+                        <li className={"hideOnMobile"}>
+                            <NavLink style={{color: "white"}} to={"/дизельноетопливо"}>Дизельное топливо</NavLink>
+
+                        </li>
+                        <li className={"hideOnMobile"}>
+                            <NavLink style={{color: "white"}} to={"/миниАЗС"}>Мини-АЗС</NavLink>
+
+                        </li>
+                        <li className={"hideOnMobile"}>
+                            <NavLink style={{color: "white"}} to={"/печноетопливо"}>Печное топливо</NavLink>
+
+                        </li >
+                        <li className={"hideOnMobile"}>
+                            <NavLink style={{color: "white", display:"flex",alignItems:"center"}} to={"/судовоетопливо"}>Судовое топливо</NavLink>
+
+                        </li>
+                        <li className={"hideOnMobile"}>
+                            <NavLink style={{color: "white", display:"flex",alignItems:"center"}} to={"/блог"}>Блог</NavLink>
+
+                        </li>
+                      <li className={"hideOnMobile"}>
+                          <NavLink style={{color: "white", display:"flex",alignItems:"center"}} to={"/контакты"}>Контакты</NavLink>
+
+                      </li>
+                        <li className={"hideOnMobile"}>
+                            <NavLink style={{color: "white", display:"flex",alignItems:"center"}} to={"/личныйкабинет"}>Личный кабинет</NavLink>
+
+
+
+
+                        </li>
+                        <li>
+                                <img className={"menu"} onClick={showSidebar} src={menu} alt=""/>
+
+
+                        </li>
+
+                    </ul>
 
 
                     <div className='under-nav'>

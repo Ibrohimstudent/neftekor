@@ -183,9 +183,11 @@ function Index({logo1,logo2,logo3,logo4,logo5,
             </div>
             <div className="footer">
                 <div className="part1">
+                    <h1>Свяжитесь <span style={{color: "#DBA833"}}>с нами!</span></h1>
+
                     <form action="" method={"get"}>
-                        <input id={"name"} type="text" className={"input"} placeholder={"Имя"} />
-                        <input id={"phone"} type="phone" className={"input"} placeholder={"Телефон"} />
+                        <input id={"name"} type="text" className={"input"} placeholder={"Имя"}/>
+                        <input id={"phone"} type="phone" className={"input"} placeholder={"Телефон"}/>
                         <button onClick={sendTelegram} type="submit" className={"input2"}>Отправить</button>
                     </form>
                 </div>

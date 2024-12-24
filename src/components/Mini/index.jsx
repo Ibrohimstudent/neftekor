@@ -109,12 +109,12 @@ function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jit
             <div className="pages4">
                 <h1>Примеры наших <span style={{color: "#DBA833"}}>АЗС на предприятиях</span></h1>
                 <div className="images">
-                    <img src={neftekor1} alt=""/>
-                    <img src={neftekor2} alt=""/>
-                    <img src={neftekor3} alt=""/>
-                    <img src={neftekor4} alt=""/>
-                    <img src={neftekor5} alt=""/>
-                    <img src={neftekor6} alt=""/>
+                    <img className={"neft1"} src={neftekor1} alt=""/>
+                    <img  className={"neft2"} src={neftekor2} alt=""/>
+                    <img className={"neft3"} src={neftekor3} alt=""/>
+                    <img className={"neft4"} src={neftekor4} alt=""/>
+                    <img className={"neft5"} src={neftekor5} alt=""/>
+                    <img className={"neft6"} src={neftekor6} alt=""/>
                 </div>
             </div>
             <div className="pages5">
@@ -239,9 +239,11 @@ function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jit
             </div>
             <div className="footer">
                 <div className="part1">
+                    <h1>Свяжитесь <span style={{color: "#DBA833"}}>с нами!</span></h1>
+                    
                     <form action="" method={"get"}>
-                        <input id={"name"} type="text" className={"input"} placeholder={"Имя"} />
-                        <input id={"phone"} type="phone" className={"input"} placeholder={"Телефон"} />
+                        <input id={"name"} type="text" className={"input"} placeholder={"Имя"}/>
+                        <input id={"phone"} type="phone" className={"input"} placeholder={"Телефон"}/>
                         <button onClick={sendTelegram} type="submit" className={"input2"}>Отправить</button>
                     </form>
                 </div>

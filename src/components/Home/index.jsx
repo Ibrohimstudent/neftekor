@@ -63,7 +63,6 @@ function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jit
                     <button className={"btn"}>Подробнее</button>
                 </div>
             </div>
-
             <div className="page2">
                 <div className="head">
                     <h1>Умная <span style={{color: "#DBA833"}}>АЗС НЕФТЕКОР</span></h1>
@@ -209,9 +208,9 @@ function Index({mini1,mini2,mini3,vector,gas,syn,lom,atlant,uvarovskaya,deka,jit
                 <div className="part1">
                     <h1>Свяжитесь <span style={{color: "#DBA833"}}>с нами!</span></h1>
                     <form action="" method={"get"}>
-                        <input id={"name"} type="text" className={"input"} placeholder={"Имя"} />
+                        <input id={"name"} type="text" className={"input"} placeholder={"Имя"}/>
                         <input id={"phone"} type="phone" className={"input"} placeholder={"Телефон"}/>
-                        <button onClick={sendTelegram} type="submit" className={"input2"}>Отправить</button>
+                        <button onClick={sendTelegram} type="button" className={"input2"}>Отправить</button>
                     </form>
 
                 </div>

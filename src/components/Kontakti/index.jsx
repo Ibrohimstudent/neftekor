@@ -56,17 +56,20 @@ const Index = ({footer2,logo,logout,yandex,vk,whatsapp,telegram}) => {
         <div className={"container8"}>
             <div className="head">
                 <h1>Контакты ООО <span style={{color: "#DBA833"}}>"НЕФТЕКОР ВВ"</span></h1>
-                <p>Поставка нефтепродуктов в Москве и Московской области</p>
+                <p>От 1000 литров и от 46 рублей за литр</p>
+                <div className="btn">
+                    <p>Заказать звонок</p>
+                </div>
             </div>
             <div className="site1">
                 <div className="form">
                     <div className="left">
                         <h2><span style={{color: "#DBA833"}}>Свяжитесь</span> с нами</h2>
-                        <input id={"name"} style={{width: "49%", marginRight: "2%"}} type="text" placeholder={"Имя"}/>
-                        <input id={"company"} style={{width: "49%"}} type="text" placeholder={"Компания"}/>
+                        <input id={"name"} className={"input1"}  type="text" placeholder={"Имя"}/>
+                        <input id={"company"} className={"input1"} type="text" placeholder={"Компания"}/>
                         <input id={"email"} type="email" placeholder={"Email"}/>
                         <input id={"phone"} type="phone" placeholder={"Телефон"}/>
-                        <input onClick={SendForm} style={{color: "#DBA833", border: "1px solid #DBA833", backgroundColor: "white"}}
+                        <input onClick={SendForm} style={{color: "#DBA833",fontWeight:"600",fontSize:"20px", border: "2px solid #DBA833", backgroundColor: "#F8F8F8"}}
                                type="submit" value={"Отправить"}/>
                     </div>
                     <div className="right">
