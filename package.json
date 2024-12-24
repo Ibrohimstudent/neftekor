@@ -1,0 +1,54 @@
+{
+  "name": "examsite",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "ajax": "^0.0.4",
+    "bootstrap": "^5.3.3",
+    "gh-pages": "^6.2.0",
+    "jquery": "^3.7.1",
+    "jquery-ajax": "^2.1.4",
+    "lucide-react": "^0.338.0",
+    "node-telegram-bot-api": "^0.64.0",
+    "react": "^18.2.0",
+    "react-ajax": "^0.1.1",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "react-script-tag": "^1.1.2",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.4",
+    "sass": "^1.70.0",
+    "telegraf": "^4.15.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "http://Ibrohimstudent.github.io/neftekor"
+}
